@@ -25,3 +25,6 @@ priv/
 .cups/
 .dropbox/
 .atom/storage/
+.gradle/caches/
+.pip/
+.sbt/

@@ -1,0 +1,25 @@
+'global':
+  'exception-reporting':
+    'userId': 'aaa6209e-39c4-b99a-9976-04b7bb4dd47e'
+  'release-notes':
+    'viewedVersion': '0.94.0'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '01fab8fa25cbcdf5fe1e5422d53d90f0aa19afdc'
+  'editor':
+    'tabSize': 4
+    'tabLength': 4
+    'fontFamily': 'Source Code Pro'
+  'core':
+    'themes': [
+      'atom-dark-ui'
+      'monokai'
+    ]
+    'ignoredNames': [
+      '.git'
+      '.svn'
+      '.DS_Store'
+      '.class'
+      '.out'
+    ]

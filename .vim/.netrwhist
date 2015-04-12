@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/aaron/Documents/github/recitation-spring-2015/rec-8'
+let g:netrw_dirhist_2='/Users/aaron/Documents/school/classes/senior-design/sprint2'
+let g:netrw_dirhist_3='/Users/aaron/Documents/github/hw/collections/pizzatime/solution'
+let g:netrw_dirhist_4='/Users/aaron/Documents/github/recitation-spring-2015/plasterclash/provided'
+let g:netrw_dirhist_5='/Users/aaron/Documents/school/ta-stuff/spring-15/homework-5/Sun,_Yixin(dea087b2f314bade8960ab89b02d994b)/Submission_attachment(s)'
+let g:netrw_dirhist_6='/Users/aaron/Documents/school/ta-stuff/spring-15/homework-5/Wang,_Lixin(9fd330c294b7fe29ea4863bdb2e06a48)/Submission_attachment(s)'
+let g:netrw_dirhist_7='/Users/aaron/Documents/school/ta-stuff/spring-15/homework-5/Yoo,_Gyung_Yoon(c9af8f7375aa4627791c4de9940d0e70)/Submission_attachment(s)'
+let g:netrw_dirhist_8='/Users/aaron/Documents/school/ta-stuff/spring-15/homework-5/Zalzman,_Jessica(6a7df3a833f71903577548a8ea5cf487)'
+let g:netrw_dirhist_9='/Users/aaron/.vim/bundle/vim-scala'

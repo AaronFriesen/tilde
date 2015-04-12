@@ -28,3 +28,4 @@ priv/
 .gradle/caches/
 .pip/
 .sbt/
+.ivy2/

@@ -1,0 +1,4 @@
+#!/bin/bash
+FILES=$( find . | grep .java$ )
+
+java -jar /Users/aaron/bin/res/checkstyle-6.2.1.jar $FILES

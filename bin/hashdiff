@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir temp
+mv "$1".class temp
+javac "$1".java
+diff "$1".class temp/"$1".class
+mv temp/"$1".class .
+rm -r temp

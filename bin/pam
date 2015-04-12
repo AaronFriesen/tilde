@@ -1,0 +1,98 @@
+#!/usr/bin/env python
+
+from __future__ import print_function
+
+import datetime
+import io
+import os
+import re
+import sys
+
+
+date = datetime.datetime.strptime
+
+def t2sort(lines, pos=-1, df='%b %d, %Y %I:%M %p'):
+  def fixlines(lines):
+    cline = ''
+    for line in lines:
+      if re.search('[0-9]+:[0-9]+ [ap]m*', line.strip()):
+        if len(cline) > 0: cline += ' '
+        yield cline + line
+        cline = ''
+      else:
+        if len(cline) > 0: cline += ' '
+        cline += line
+    if cline:
+      yield cline
+  lines = fixlines(lines)
+  lines = [l.strip() for l in lines if re.search('[0-9]+ [ap]m*$', l.strip())]
+  lines = [l for l in lines if l]
+  lines = sorted(lines, key=lambda l: date(l.split('\t')[pos], df))
+  return lines
+
+def after(s, p, right=False):
+  i = s.rfind(p) if right else s.find(p)
+  return s[i+1:]
+
+def before(s, p, right=False):
+  i = s.rfind(p) if right else s.find(p)
+  if i < 0: i = len(s)
+  return s[:i]
+
+if __name__ == '__main__':
+  lines = []
+  while True:
+    try:
+      line = raw_input()
+    except: break
+    if line is None: break
+    while '\n' in line:
+      n = line.find('\n')
+      lines.append(line[:n])
+      line = line[n+1:]
+    lines.append(line)
+
+  flags = set()
+  args = []
+  for a in sys.argv[1:]:
+    if re.match('^[-][a-zA-Z]+$', a) is not None:
+      flags.update(a[1:])
+    else:
+      args.append(a)
+
+  # Useful Constants
+  NL = '\n'
+  TB = '\t'
+  CN = ':'
+  BS = '\\'
+  FS = '/'
+  SR = '*'
+  SP = ' '
+  SQ = "'"
+  DQ = '"'
+  SC = ';'
+  CC = ':'
+
+  command = 's = ' + ' '.join(args)
+  if 's' in flags:
+    s = '\n'.join(lines)
+    exec(command)
+    print(s)
+  elif 'f' in flags:
+    nlines = []
+    for i,s in enumerate(lines):
+      line = s
+      exec(command)
+      if s: nlines.append(line)
+    print('\n'.join(nlines))
+  elif 'g' in flags:
+    s = '\n'.join(lines)
+    command = 'lines = ' + ' '.join(args)
+    exec(command)
+    s = '\n'.join(lines)
+    print(s)
+  else:
+    for i,s in enumerate(lines):
+      exec(command)
+      lines[i] = str(s)
+    print('\n'.join(lines))

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+WC="$(checkstyle | egrep -v "Starting audit|Audit done" -c)"
+
+echo "$WC"

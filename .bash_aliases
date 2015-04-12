@@ -22,6 +22,14 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias much="git"
+alias such="git"
+alias very="git"
+alias wow="git status"
+alias add="git status -s | egrep \"^[\s,M]M\" | col 2 | xargs git add"
+
+
+
 function make_and_move() {
     if [ ! -d $1 ]; then
         mkdir $1
@@ -54,6 +62,10 @@ function clean_whitespace() {
 function col {
     awk -v col=$1 '{print $col}'
 }
+
+
+
+
 
 alias junitc=compile_junit
 alias junit=run_junit

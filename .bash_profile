@@ -28,7 +28,7 @@ complete -f -X '*.tex' open
 complete -f -X '*.class' scalac
 
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' -e 's/ (home)//'
 }
 
 old_PS1="\[\033[1;34m\]\u\[\033[00m\]@\[\033[1;32m\]\h\[\033[00m\]:\[\033[1;33m\]\w\[\033[1;36m\]\$(parse_git_branch)\[\033[00m\] $ "

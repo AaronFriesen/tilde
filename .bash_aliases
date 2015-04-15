@@ -26,7 +26,7 @@ alias much="git"
 alias such="git"
 alias very="git"
 alias wow="git status"
-alias add="git status -s | egrep \"^[\s,M]M\" | col 2 | xargs git add"
+alias add="git status -s | egrep \"^[ ,M]M\" | col 2 | xargs git add"
 
 
 

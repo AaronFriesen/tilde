@@ -26,6 +26,10 @@ set laststatus=2
 set showtabline=2
 set noshowmode
 set encoding=utf-8
+set tabstop=4
+set shiftwidth=4
+
+let mapleader = "\<Space>"
 
 
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -41,27 +45,28 @@ au BufNewFile,BufRead *.js set tabstop=2
 au BufNewFile,BufRead *.js set shiftwidth=2
 au BufNewFile,BufRead *.java set tabstop=4
 au BufNewFile,BufRead *.java set shiftwidth=4
-au BufNewFile,BufRead *.tex nmap \be o\begin{enumerate}<CR>\end{enumerate}<ESC>O<TAB>
-au BufNewFile,BufRead *.tex nmap \bi o\begin{itemize}<CR>\end{itemize}<ESC>O<TAB>
-au BufNewFile,BufRead *.tex nmap \B a \textbf{
-au BufNewFile,BufRead *.tex nmap \U a \underline{
-au BufNewFile,BufRead *.tex nmap \I a \texit{
-au BufNewFile,BufRead *.tex nmap \T a {\tt 
+au BufNewFile,BufRead *.tex nmap <Leader>be o\begin{enumerate}<CR>\end{enumerate}<ESC>O<TAB>
+au BufNewFile,BufRead *.tex nmap <Leader>bi o\begin{itemize}<CR>\end{itemize}<ESC>O<TAB>
+au BufNewFile,BufRead *.tex nmap <Leader>B a \textbf{
+au BufNewFile,BufRead *.tex nmap <Leader>U a \underline{
+au BufNewFile,BufRead *.tex nmap <Leader>I a \texit{
+au BufNewFile,BufRead *.tex nmap <Leader>T a {\tt 
 au BufRead *.tex AutoCloseOff
 
 nnoremap t gt
 nmap j gj
 nmap k gk
-nmap \f :nohlsearch<CR>
-nmap \k :retab<CR> :%s/\s\+$//g<CR>
+nmap <Leader>f :nohlsearch<CR>
+nmap <Leader>k :retab<CR> :%s/\s\+$//g<CR>
 
 nnoremap <S-t> gT
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
 nmap <C-T> :tabe<CR>
-nmap <C-e> <C-w>n<C-w>L
+nmap <Leader>e <C-w>n<C-w>L
 nmap <C-c> :SyntasticCheck<CR>
 nmap <C-x> :SyntasticReset<CR>
 nmap <BS> hxi
-nmap <SPACE> i<SPACE><ESC>l
 nmap <CR> geldwi<CR>
 
 highlight Pmenu ctermfg=blue ctermbg=black

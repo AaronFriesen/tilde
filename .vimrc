@@ -30,6 +30,8 @@ set tabstop=4
 set shiftwidth=4
 
 let mapleader = "\<Space>"
+let java_highlight_functions=1
+let java_highlight_all=1
 
 
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -56,21 +58,23 @@ au BufRead *.tex AutoCloseOff
 nnoremap t gt
 nmap j gj
 nmap k gk
-nmap <Leader>f :nohlsearch<CR>
+nmap <Leader>h :nohlsearch<CR>
 nmap <Leader>k :retab<CR> :%s/\s\+$//g<CR>
 
 nnoremap <S-t> gT
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
-nmap <C-T> :tabe<CR>
-nmap <Leader>e <C-w>n<C-w>L
-nmap <C-c> :SyntasticCheck<CR>
-nmap <C-x> :SyntasticReset<CR>
-nmap <BS> hxi
-nmap <CR> geldwi<CR>
+nnoremap <C-T> :tabe<CR>
+nnoremap <Leader>e <C-w>n<C-w>L
+nnoremap <C-c> :SyntasticCheck<CR>
+nnoremap <C-x> :SyntasticReset<CR>
+nnoremap <BS> hxi
+nnoremap <CR> geldwi<CR>
+nnoremap <Leader>q :wq<CR>
 
 highlight Pmenu ctermfg=blue ctermbg=black
 
+" Separating options by program to keep the world a better place
 let g:syntastic_java_checkers = ["javac", "checkstyle"]
 let g:syntastic_java_checkstyle_classpath = "~/bin/res/checkstyle-6.0.jar"
 let g:syntastic_java_checkstyle_conf_file = "~/bin/res/cs1331-checkstyle.xml"
@@ -79,7 +83,10 @@ let g:syntastic_mode_map = { "mode": "passive",
                                \ "active_filetypes": [],
                                \ "passive_filetypes": [] }
 let g:syntastic_enable_signs = 1
+
 let g:Powerline_symbols = 'fancy'
+
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()

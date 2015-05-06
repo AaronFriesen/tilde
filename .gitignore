@@ -30,3 +30,7 @@ priv/
 .sbt/
 .ivy2/
 .bash_history
+.config/ranger/history
+.config/ranger/bookmarks
+.vim/.netrwhist
+.w3m/

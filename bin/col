@@ -1,0 +1,3 @@
+#!/bin/bash
+
+awk -v col=$1 '{print $col}'

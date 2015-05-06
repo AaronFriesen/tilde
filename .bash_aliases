@@ -16,7 +16,7 @@ alias ba="vim ~/.bash_aliases"
 alias bp="vim ~/.bash_profile"
 alias vv="vim ~/.vimrc"
 alias nb="git checkout -b"
-alias sr="scalac *.scala && scala App"
+alias sr="scalac *.scala && scala \`grep 'extends App' *.scala | col 2\` "
 alias mkdir="mkdir -p"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -57,10 +57,7 @@ function make_pdf() {
     fi
 }
 function clean_whitespace() {
-    find . -depth -name '* *' | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
-}
-function col {
-    awk -v col=$1 '{print $col}'
+    find . -depth -name '* *' | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' -)" ; done
 }
 
 

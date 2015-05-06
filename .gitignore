@@ -34,3 +34,4 @@ priv/
 .config/ranger/bookmarks
 .vim/.netrwhist
 .w3m/
+.config/filezilla/

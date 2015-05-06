@@ -29,8 +29,6 @@ alias wow="git status"
 alias add="git status -s | egrep \"^[ ,M]M\" | col 2 | xargs git add"
 alias bfg="java -jar ~/bin/res/bfg-1.12.3.jar"
 
-
-
 function make_and_move() {
     if [ ! -d $1 ]; then
         mkdir $1

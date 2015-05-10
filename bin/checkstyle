@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 FILES=$( find . | grep .java$ )
 
 java -jar /Users/aaron/bin/res/checkstyle-6.0.jar -c /Users/aaron/bin/res/cs1331-checkstyle.xml $FILES

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 BRANCH=`git branch | grep '*' | ~/bin/col 2`
 

@@ -1,12 +1,9 @@
 export CDPATH=":~/Documents/school"
-export CDPATH="$CDPATH:~/Documents/school/ta-stuff"
-export CDPATH="$CDPATH:~/Documents/school/ta-stuff/spring-15"
 export EDITOR=vim
 
 export FIGNORE="DS_Store"
 
 export SCALA_HOME=/usr/bin/scala-2.11.1
-export GREP_OPTIONS="--color=auto --binary-files=without-match"
 # Setting PATH for Python 3.4
 # The orginal version is saved in .bash_profile.pysave
 

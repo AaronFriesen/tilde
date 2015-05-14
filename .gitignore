@@ -5,6 +5,7 @@
 .python_history
 .scala_history
 .octave_hist
+.lesshst
 .bash_history
 .config/ranger/history
 .config/ranger/bookmarks

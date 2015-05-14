@@ -84,6 +84,10 @@ let g:syntastic_mode_map = { "mode": "passive",
                                \ "passive_filetypes": [] }
 let g:syntastic_enable_signs = 1
 
+let g:syntastic_scala_checkers = ["scalastyle"]
+let g:syntastic_scala_scalastyle_jar = "~/bin/res/scalastyle_2.11-0.6.0-batch.jar"
+let g:syntastic_scala_scalastyle_config_file = "~/bin/res/scalastyle_config-custom.xml"
+
 let g:Powerline_symbols = 'fancy'
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+FILES=$( find . | grep .scala$ )
+
+java -jar ~/bin/res/scalastyle_2.11-0.6.0-batch.jar -c ~/bin/res/scalastyle_config-custom.xml -q true $FILES

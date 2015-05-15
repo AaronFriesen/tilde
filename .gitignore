@@ -27,6 +27,7 @@
 .ivy2/
 .w3m/
 .config/filezilla/
+.config/NetHack4/
 
 Applications/
 Desktop/

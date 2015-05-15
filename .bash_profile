@@ -1,14 +1,17 @@
+# Common path additions
 export CDPATH=":~/Documents/school"
+
+# The one true text editor
 export EDITOR=vim
 
+# Never autocomplete on DS_Store
 export FIGNORE="DS_Store"
 
-export SCALA_HOME=/usr/bin/scala-2.11.1
 # Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-
 export PATH=~/bin:$PATH
+export SCALA_HOME=/usr/bin/scala-2.11.1
 
+# You complete me, {git|bash}
 if [ -f ~/bin/.git-completion.bash ]; then
     . ~/bin/.git-completion.bash
 fi
@@ -24,11 +27,16 @@ complete -f -X '*.tex' open
 # Make scalac stop autocompleting on garbage
 complete -f -X '*.class' scalac
 
+# Parse git branch, but don't parse (home) because I'm technically always in a git repo called home
 parse_git_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' -e 's/ (home)//'
 }
 
 old_PS1="\[\033[1;34m\]\u\[\033[00m\]@\[\033[1;32m\]\h\[\033[00m\]:\[\033[1;33m\]\w\[\033[1;36m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# Sexify my prompt
 export PS1="\[\033[38;5;214m\]\u\[\033[00m\]@\[\033[38;5;104m\]\h\[\033[00m\]:\[\033[38;5;214m\]\w\[\033[38;5;105m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# Use my aliases
 source ~/.bash_aliases
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh

@@ -26,6 +26,7 @@
 .sbt/
 .ivy2/
 .w3m/
+.boot2docker/
 .config/filezilla/
 .config/NetHack4/
 
@@ -39,6 +40,7 @@ Movies/
 Pictures/
 Public/
 Music/
+VirtualBox VMs/
 scratch/
 compile-cache/
 priv/

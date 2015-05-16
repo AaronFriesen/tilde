@@ -18,6 +18,8 @@ brew install tig --with-docs
 brew install ant
 brew install gradle
 brew install sbt
+brew install docker
+brew install boot2docker
 
 # Various languages I toy with
 brew install python
@@ -36,3 +38,4 @@ brew install grep --with-default-names
 brew install rename
 brew install w3m
 brew install wget
+brew install ranger

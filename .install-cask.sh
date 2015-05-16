@@ -8,6 +8,7 @@ brew cask install adobe-reader
 brew cask install aquaterm
 brew cask install firefox
 brew cask install google-chrome
+brew cask install virtualbox
 
 # Productivity Helpers
 brew cask install audacity

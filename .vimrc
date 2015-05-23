@@ -45,6 +45,9 @@ set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
 
+" Because suddenly they changed how backspacing worked in 7.4
+set backspace=2
+
 " I think these are for powerline compatability?
 set laststatus=2
 set showtabline=2

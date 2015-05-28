@@ -11,6 +11,8 @@
 .config/ranger/bookmarks
 .vim/.netrwhist
 
+.android/
+.activator/
 .ssh/
 .cabal/
 .Trash/
@@ -29,6 +31,7 @@
 .boot2docker/
 .config/filezilla/
 .config/NetHack4/
+.IntelliJIdea14/
 
 Applications/
 Desktop/

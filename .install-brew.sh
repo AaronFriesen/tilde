@@ -30,6 +30,7 @@ brew install erlang
 brew install gcc
 brew install lua
 brew install mit-scheme
+brew install typesafe-activator
 
 # Other useful utilities
 brew install antlr

@@ -128,7 +128,5 @@ let g:syntastic_scala_scalastyle_config_file = "~/bin/res/scalastyle_config-cust
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-let g:Powerline_symbols = 'fancy'
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1

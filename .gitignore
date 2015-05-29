@@ -22,7 +22,6 @@
 .cups/
 .dropbox/
 .gem/
-.atom/storage/
 .gradle/caches/
 .pip/
 .sbt/

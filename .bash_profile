@@ -1,6 +1,3 @@
-# Common path additions
-export CDPATH=":~/Documents/school"
-
 # The one true text editor
 export EDITOR=vim
 
@@ -16,7 +13,7 @@ export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/aaron/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
-# You complete me, {git|bash}
+# You complete me, {git|bash|aws}
 if [ -f ~/bin/.git-completion.bash ]; then
     . ~/bin/.git-completion.bash
 fi
@@ -24,6 +21,7 @@ fi
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+complete -C aws_completer aws
 
 # Make vim stop autocompleting on garbage
 complete -f -X '*.@(pdf|class|o|jpg|png|out|log|aux)' vim

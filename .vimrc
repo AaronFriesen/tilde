@@ -12,6 +12,7 @@ set autoindent
 " Horizontal line keeps track of my cursor
 set ruler
 set cursorline
+set timeoutlen=300
 
 " Mostly for :e autocompleting things
 set wildmode=longest,list
@@ -95,7 +96,8 @@ nmap <Leader>h :nohlsearch<CR>
 nmap <Leader>k :retab<CR> :%s/\s\+$//g<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :wq<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>e <C-w>n<C-w>L
 nnoremap <BS> hxi
 nnoremap <CR> geldwi<CR>

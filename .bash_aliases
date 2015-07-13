@@ -29,6 +29,7 @@ alias vv="vim ~/.vimrc"
 # Because $PATH_VARIABLES are deprecated for some utils
 alias grep="grep --color=auto --binary-files=without-match"
 alias mkdir="mkdir -p"
+alias tree="tree -CF"
 
 # Don't judge me
 alias much="git"

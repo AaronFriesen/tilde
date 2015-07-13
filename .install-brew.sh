@@ -40,3 +40,4 @@ brew install rename
 brew install w3m
 brew install wget
 brew install ranger
+brew install tree

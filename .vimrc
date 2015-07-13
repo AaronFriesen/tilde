@@ -45,6 +45,7 @@ set smartcase
 set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
+set hidden
 
 " Because suddenly they changed how backspacing worked in 7.4
 set backspace=2
@@ -91,16 +92,26 @@ au BufRead *.tex AutoCloseOff
 nnoremap j gj
 nnoremap k gk
 
-" Misc
-nmap <Leader>h :nohlsearch<CR>
-nmap <Leader>k :retab<CR> :%s/\s\+$//g<CR>
+" Normal Mappings
+nnoremap <Leader>h :call Highlght()<CR>
+nnoremap <Leader>k :retab<CR> :%s/\s\+$//g<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>e <C-w>n<C-w>L
+nnoremap <Leader>d :Bclose<CR>
+nnoremap <Leader>< :bp<CR>
+nnoremap <Leader>> :bn<CR>
+nnoremap <Leader>c :! 
 nnoremap <BS> hxi
 nnoremap <CR> geldwi<CR>
+nnoremap <C-n> o<ESC>
+
+" Insert Mappings
+inoremap <C-y> <C-p>
+inoremap <C-p> <C-n>
+inoremap <C-n> <C-o>o
 
 " Tab functionality
 nnoremap <C-T> :tabe<CR>
@@ -132,3 +143,28 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+let g:netrw_bufsettings = "noma nomod nu relativenumber nowrap ro"
+let g:netrw_liststyle=3
+
+" Autoupdate vim as I mess with its settings
+autocmd BufWritePost .vimrc source ~/.vimrc
+
+" Useful custom functions, mostly for toggling various things.
+function! Commt()
+    let first_nonblank = matchstr(getline('.'), '\S')
+    if first_nonblank == '/'
+        execute 'normal! hhm`^xxx``i'
+    elseif first_nonblank != ''
+        execute 'normal! m`I// '
+        execute 'normal! ``3l'
+    endif
+endfunction
+
+function! Highlght()
+    if %hlsearch == 1
+        set nohlsearch
+    else
+        set hlsearch
+    endif
+endfunction

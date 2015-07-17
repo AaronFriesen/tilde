@@ -20,7 +20,12 @@ When I inevitably need to do a fresh install of this repo:
 
 1. Install [brew](http://brew.sh/), you monster! Unless OSX starts coming bundled with it. That'll be the day...
 2. Install git via `brew install git`. How else were you going to clone this bad boy?
-3. `cd` to `/Users/`
-4. `git clone https://github.com/AaronFriesen/tilde.git aaron` (or whatever I'm calling myself by then)
-5. Run `./.install-brew.sh && ./install-cask.sh`. Go have a drink. Cask in particular could take a _while_.
+3. `cd` to `~`
+4. Because git can be dumb sometimes, it doesn't allow you to clone into a nonempty directory. Instead, do it anyway:
+5. `git init .`
+6. `git remote add -t \* -f origin https://github.com/AaronFriesen/tilde.git`
+7. `git checkout master`
+8. Setup OS-specific files:
+    a) If on OS X, run `./.install-brew.sh && ./install-cask.sh`. Go have a drink. Cask in particular could take a _while_.
+    b) If on non-OS X Linux, run `./.install-linux`. Hope that all turns out well.
 6. Thank past you (a.k.a. me) for updating the README before I actually needed it.

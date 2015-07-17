@@ -18,7 +18,6 @@ alias cdc="cd ~/Documents/code"
 alias cds="cd ~/Documents/code/scala"
 alias cdj="cd ~/Documents/code/java"
 alias cdd="cd ~/Documents"
-alias cdg="cd ~/Documents/github"
 alias cdt="cd ~/Documents/github/Trydent"
 
 # Files I open a lot
@@ -36,6 +35,7 @@ alias much="git"
 alias such="git"
 alias very="git"
 alias wow="git status"
+alias wowe="git status -s"
 
 
 # "New Branch"
@@ -79,6 +79,12 @@ function make_pdf() {
 function clean_whitespace() {
     find . -depth -name '* *' | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' -)" ; done
 }
+function go_to_git() {
+    if [ ! -e .git  ]; then
+        cd ..
+        go_to_git
+    fi
+}
 
 # Aliasing said functions
 alias junitc=compile_junit
@@ -87,3 +93,4 @@ alias mcd=make_and_move
 alias note=take_notes
 alias mk=make_pdf
 alias clean-whitespace=clean_whitespace
+alias cdg=go_to_git

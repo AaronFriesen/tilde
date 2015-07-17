@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+sudo yum update
+sudo yum upgrade
+
+sudo yum install git -y
+sudo yum install tig -y
+sudo yum install tree -y
+sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
+# Then override java because yum is stupid sometimes
+echo 2 | sudo alternatives --config java
+
+sudo yum localinstall http://downloads.typesafe.com/scala/2.11.7/scala-2.11.7.rpm -y
+curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
+sudo yum install sbt -y
+sudo yum localinstall http://rpm.typesafe.com/typesafe-repo-2.0.0-1.noarch.rpm -y
+
+sudo yum install w3m -y
+
+ln -sf os/.linux_aliases .bash_aliases
+ln -sf os/.linux_profile .linux_profile

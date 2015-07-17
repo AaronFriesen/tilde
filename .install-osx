@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+./.install-brew
+./.install-cask
+
+ln -sf os/.osx_aliases .bash_aliases
+ln -sf os/.osx_profile .bash_profile
+
+defaults write -g InitialKeyRepeat -int 15
+defaults write -g KeyRepeat -int 1 # or 0 if you're feeling spicy

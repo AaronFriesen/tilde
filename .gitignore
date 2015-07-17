@@ -1,15 +1,17 @@
 *.class
 
 .DS_STORE
-.viminfo
+.bash_aliases
+.bash_history
+.bash_profile
+.config/ranger/bookmarks
+.config/ranger/history
+.lesshst
+.octave_hist
 .python_history
 .scala_history
-.octave_hist
-.lesshst
-.bash_history
-.config/ranger/history
-.config/ranger/bookmarks
 .vim/.netrwhist
+.viminfo
 
 .IntelliJIdea14/
 .Trash/

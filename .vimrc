@@ -65,7 +65,7 @@ let java_highlight_all=1
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertEnter * match ExtraWhitespace //
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
@@ -93,8 +93,8 @@ nnoremap j gj
 nnoremap k gk
 
 " Normal Mappings
-nnoremap <Leader>h :call Highlght()<CR>
-nnoremap <Leader>k :retab<CR> :%s/\s\+$//g<CR>
+nnoremap <Leader>/ :call Highlght()<CR>
+nnoremap <Leader>r :retab<CR> :%s/\s\+$//g<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -104,6 +104,13 @@ nnoremap <Leader>d :Bclose<CR>
 nnoremap <Leader>< :bp<CR>
 nnoremap <Leader>> :bn<CR>
 nnoremap <Leader>c :! 
+
+" Easy window movement mappings
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+nnoremap <Leader>l <C-w>l
+
 nnoremap <BS> hxi
 nnoremap <CR> geldwi<CR>
 nnoremap <C-n> o<ESC>
@@ -112,6 +119,7 @@ nnoremap <C-n> o<ESC>
 inoremap <C-y> <C-p>
 inoremap <C-p> <C-n>
 inoremap <C-n> <C-o>o
+inoremap <C-j> <C-o>:call Commt()<CR>
 
 " Tab functionality
 nnoremap <C-T> :tabe<CR>
@@ -122,7 +130,6 @@ nnoremap <S-t> gT
 " Syntastic convenience
 nnoremap <C-c> :SyntasticCheck<CR>
 nnoremap <C-x> :SyntasticReset<CR>
-
 highlight Pmenu ctermfg=blue ctermbg=black
 
 " Separating options by program to keep the world a better place
@@ -162,7 +169,7 @@ function! Commt()
 endfunction
 
 function! Highlght()
-    if %hlsearch == 1
+    if &hlsearch == 1
         set nohlsearch
     else
         set hlsearch

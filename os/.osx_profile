@@ -1,6 +1,9 @@
 # The one true text editor
 export EDITOR=vim
 
+# Remember a lot of commands for CTRL-R completion
+export HISTSIZE=5000
+
 # Never autocomplete on DS_Store
 export FIGNORE="DS_Store"
 

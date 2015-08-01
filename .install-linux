@@ -18,4 +18,4 @@ sudo yum localinstall http://rpm.typesafe.com/typesafe-repo-2.0.0-1.noarch.rpm -
 sudo yum install w3m -y
 
 ln -sf os/.linux_aliases .bash_aliases
-ln -sf os/.linux_profile .linux_profile
+ln -sf os/.linux_profile .bash_profile

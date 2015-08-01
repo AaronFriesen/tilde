@@ -25,7 +25,8 @@ When I inevitably need to do a fresh install of this repo:
 5. `git init .`
 6. `git remote add -t \* -f origin https://github.com/AaronFriesen/tilde.git`
 7. `git checkout master`
-8. Setup OS-specific files:
-    a) If on OS X, run `./.install-brew.sh && ./install-cask.sh`. Go have a drink. Cask in particular could take a _while_.
-    b) If on non-OS X Linux, run `./.install-linux`. Hope that all turns out well.
-6. Thank past you (a.k.a. me) for updating the README before I actually needed it.
+8. `git submodule update --init --recursive`
+9. Setup OS-specific files:
+    1. If on OS X, run `./.install-osx`. Go have a drink. Cask in particular could take a _while_.
+    2. If on non-OS X Linux, run `./.install-linux`. Hope that all turns out well.
+10. Thank past you (a.k.a. me) for updating the README before I actually needed it.

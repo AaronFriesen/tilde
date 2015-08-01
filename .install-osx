@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-./.install-brew
-./.install-cask
+./.install-brew.sh
+./.install-cask.sh
 
 ln -sf os/.osx_aliases .bash_aliases
 ln -sf os/.osx_profile .bash_profile

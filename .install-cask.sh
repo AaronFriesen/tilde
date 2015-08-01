@@ -4,6 +4,7 @@ brew tap caskroom/cask
 brew install brew-cask
 
 # Utility Programs
+brew cask install iterm2
 brew cask install adobe-reader
 brew cask install aquaterm
 brew cask install firefox

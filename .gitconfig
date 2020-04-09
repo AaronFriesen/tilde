@@ -2,8 +2,8 @@
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [user]
-	name = afriesen6
-	email = afriesen6@gatech.edu
+	name = aaron
+	email = aaron@aaron-friesen.com
 [push]
 	default = simple
 [credential]

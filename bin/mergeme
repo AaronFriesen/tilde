@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-
-BRANCH=`git branch | grep '*' | ~/bin/col 2`
-
-echo $BRANCH
-
-git checkout master
-git merge $BRANCH
-git branch -d $BRANCH

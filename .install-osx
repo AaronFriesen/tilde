@@ -3,8 +3,8 @@
 ./.install-brew.sh
 ./.install-cask.sh
 
-ln -sf os/.osx_aliases .bash_aliases
-ln -sf os/.osx_profile .bash_profile
+ln -sf os/.osx_aliases .zsh_aliases
+ln -sf os/.osx_profile .zshrc
 
 defaults write -g InitialKeyRepeat -int 15
 defaults write -g KeyRepeat -int 1 # or 0 if you're feeling spicy

@@ -1,5 +1,8 @@
 *.class
 
+.CFUserTextEncoding
+.zcompdump
+.tig_history
 .DS_STORE
 .bash_aliases
 .bash_history
@@ -8,23 +11,28 @@
 .config/ranger/history
 .lesshst
 .octave_hist
+.profile
 .python_history
 .scala_history
 .vim/.netrwhist
 .viminfo
+.zsh_history
 
 .IntelliJIdea14/
 .Trash/
 .activator/
 .android/
 .aws/
+.bash_sessions/
 .boot2docker/
 .cabal/
+.cargo/
 .cache/
 .config/NetHack4/
 .config/filezilla/
 .cups/
 .dropbox/
+.rustup/
 .gem/
 .ghc/
 .gradle/caches/

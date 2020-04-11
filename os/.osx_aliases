@@ -1,0 +1,34 @@
+# Files I open a lot
+alias vv="vim ~/.vimrc"
+alias vz="vim ~/.zshrc"
+
+# Convenient listing
+alias ls="ls -FG"
+alias la="ls -FAG"
+alias lf="ls -GAhl"
+
+# Convenient cd aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias mkdir="mkdir -p"
+
+# Don't judge me
+alias much="git"
+alias such="git"
+alias very="git"
+alias wow="git status"
+alias wowe="git status -s"
+
+# "New Branch"
+alias nb="git checkout -b"
+
+function make_and_move() {
+    if [ ! -d $1 ]; then
+        mkdir $1
+    fi
+    cd $1
+}
+alias mcd=make_and_move

@@ -17,6 +17,8 @@
 .vim/.netrwhist
 .viminfo
 .zsh_history
+.zsh_aliases
+.zshrc
 
 .IntelliJIdea14/
 .Trash/

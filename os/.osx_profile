@@ -1,0 +1,31 @@
+# Expand aliases, unless text is empty
+# Or don't because something is different in zsh
+# shopt -s expand_aliases
+# shopt -s no_empty_cmd_completion
+
+# The one true text editor
+export EDITOR=vim
+
+# Remember a lot of commands for CTRL-R completion
+export HISTSIZE=5000
+
+# Never autocomplete to DS_Store
+export FIGNORE="DS_Store"
+
+# Force re-evaluation of prompt for git purposes
+setopt PROMPT_SUBST
+
+# Make vim stop autocompleting on garbage
+# Or don't because something is different in zsh
+# complete -f -X '*.@(pdf|class|o|jpg|png|out|log|aux)' vim
+
+# Parse git branch, but don't parse (home) because I'm technically always in a git repo called home
+parse_git_branch() {
+        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' -e 's/ (home)//'
+}
+# Sexify my prompt
+PROMPT='%B%F{214}%4~%f%b%F{51}$(parse_git_branch)%f %F{15}%#%f '
+
+source ~/.zsh_aliases
+
+export PATH="/Users/aaron/.cargo/bin:$PATH"
